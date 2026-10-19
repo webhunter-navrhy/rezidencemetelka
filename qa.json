@@ -1,12 +1,8 @@
 {
-  "url": "http://localhost:8811/rezidencemetelka/",
+  "url": "https://webhunter-navrhy.github.io/rezidencemetelka/",
   "ok": true,
   "chyby": [],
-  "varovani": [
-    "Největší obrázek (PC) 431 kB > 400 kB: http://localhost:8811/rezidencemetelka/img/hk-katedrala-1920.webp",
-    "Web má noindex (u ostrého webu pravděpodobně chyba)",
-    "Dotykové cíle <40 px na mobilu: 3× (např. a.znacka \"RezidenceMetelka\" 132×39; a \"Ukázat na mapě\" 105×37; input \"\" 153×21)"
-  ],
+  "varovani": [],
   "metriky": {
     "sirky": {
       "1440": {
@@ -34,16 +30,16 @@
         "pocet_pretekajicich": 0
       }
     },
-    "preneseno_PC_MB": 1.01,
+    "preneseno_PC_MB": 0.85,
     "nejvetsi_obrazek_PC": {
-      "kB": 432,
-      "url": "http://localhost:8811/rezidencemetelka/img/hk-katedrala-1920.webp"
+      "kB": 341,
+      "url": "https://webhunter-navrhy.github.io/rezidencemetelka/img/hk-katedrala-1920.webp"
     },
     "snimku_PC": 16,
-    "preneseno_mobil_MB": 0.94,
+    "preneseno_mobil_MB": 0.83,
     "nejvetsi_obrazek_mobil": {
-      "kB": 184,
-      "url": "http://localhost:8811/rezidencemetelka/img/hk-katedrala-1280.webp"
+      "kB": 176,
+      "url": "https://webhunter-navrhy.github.io/rezidencemetelka/img/hk-cyklostezka-1280.webp"
     },
     "snimku_mobil": 19,
     "seo": {
@@ -60,7 +56,7 @@
       "canonical": true,
       "viewport": true
     },
-    "maly_dotykovy_cil": 3,
+    "maly_dotykovy_cil": 0,
     "font_nadpis": "Bodoni Moda",
     "font_text": "Jost",
     "podstranky": {

@@ -30,3 +30,9 @@
 - Schválené: Parolek (výkres s kótami z dokladů → náš řez domem), Hobby Model (popisky kolem objektu), Vila Anna v3 (teplá paleta, display 400, velké mezery, CTA vlevo).
 - Odmítnuté: tmavá + zlatá „luxus“ (Zábranský v1, Auren) → web je **světlý**, zlatá jen linky a akcent. Žádné rendery z moodboardu klientky (Bite Marks) – moodboard VDEKOR jen jako zdroj materiálů, vizualizace vlastní. Žádné intro.
 - Posledních 5 v registru: sotornik-zivotice (Lora, prohlídka krok za krokem) – jiná skladba i písmo.
+
+## Poznámky ke stavbě (19. 10. 2026)
+- Kurzíva + zlatá jen jednou na webu: „Metelka“ v obálce (titul brožury). Jinde nadpisy jedním řezem.
+- Tenký Bodoni jen od ~32 px; drobná čísla (minuty, ceny, plochy v ceníku) v Jostu 400 (výtka review).
+- Ceník se záložkami domů (výchozí K Metelce I), filtr podlaží; na mobilu kompaktní řádky.
+- Vizualizace: FLUX Krea (anonymně, kvóta účtu vyčerpaná) – obývák, jídelna; ložnice/koupelna/hala dogenerovat.

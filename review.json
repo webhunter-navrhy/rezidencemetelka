@@ -1,0 +1,17 @@
+{
+  "znamka": 8,
+  "slabiny": [
+    "Ceník (PC buňky 13–15, mobil 13–17): všech 32 řádků je rozbalených najednou. Domy I a II mají stejná data, takže tabulka zabere 3 obrazovky na PC a 5 na mobilu a působí jako výpis z Excelu. Opravit: výchozí filtr nastavit na „K Metelce I“ a přepínač domu nechat nahoře. Případně nahoře ukázat dva souhrnné řádky (přízemí se zahrádkou 5 490 000 Kč / podkroví s balkonem 4 990 000 Kč) a celý seznam schovat pod tlačítko „Zobrazit všech 32 bytů“.",
+    "Řídká a nedodělaná místa. PC buňka 12: pod fotkou jídelního koutu je velký prázdný béžový pás jen s drobným popiskem. Mezeru zmenšit asi na polovinu, nebo popisek přesunout přímo pod fotku. V kontaktu (mobil 18, PC 16) jsou pod jménem Mgr. Anny Krčmové čárkované rámečky „telefon doplníme / e-mail doplníme“, které působí jako rozbitá komponenta. Nahradit je jedním nenápadným řádkem „Kontakty doplníme“, nebo je skrýt a nechat jen formulář.",
+    "Tenký Bodoni v malých velikostech: v kartách „Se zahrádkou / S balkonem“ (52–55, 7,8–8,25), v ceníku u „byt 1…16“ a u čísel v sekci „Kolik je to odsud“ se vlasové tahy na 390 px skoro ztrácejí. Bodoni nechat jen pro nadpisy nad ~32 px, názvy bytů a minuty dát do Jostu 400 a větší čísla do Bodoni o řez silnější. Navíc první snímek na mobilu i PC začíná až sekcí Lokalita bez hlavičky: ověřit, že se stránka načte nahoře a hero se vzorovým bytem je na 390 px nad ohybem."
+  ],
+  "zavazne": [],
+  "silne": [
+    "Paleta odpovídá zadání klientky (béžová, zlatý akcent, tenké černé písmo, posh a klidný tón) a sedí k materiálům vzorového bytu VDEKOR (greige, dub rybí kost, matná černá). Ukázka materiálů jako vzorník je chytrý nápad z oboru.",
+    "Obsah stojí na doložených faktech z briefu: ceny a plochy z ceníku, skladby konstrukcí z řezu, vzdálenosti z OSRM. AI vizualizace i fotky z Wikimedia jsou označené, nic není vymyšlené.",
+    "Silná prodejní struktura pro developerský projekt: lokalita s důrazem na HK, sport a D11 podle zadání, řez domem s legendou, klikací půdorys s plochami místností, ceník s filtrem a tlačítkem „Mám zájem“ a poptávkový formulář s předvyplněným bytem.",
+    "Mobil bez přetečení, dotykové cíle v pořádku, háčky v Bodoni i Jostu se kreslí správně, data necelý 1 MB."
+  ],
+  "verdikt": "Světlý, klidný editorial, který odpovídá zadání klientky a stojí na skutečných podkladech; závažné vady nemá. Před odesláním zkrátit ceník, uklidit placeholdery v kontaktu a zesílit drobný Bodoni na mobilu.",
+  "_hash": "4b1ba86432fab895dfa17308bd9c3c693144d174"
+}

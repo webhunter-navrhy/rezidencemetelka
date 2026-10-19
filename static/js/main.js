@@ -49,7 +49,7 @@
   // filtr ceníku
   var f = d.querySelector('[data-filtr]');
   if (f) {
-    var stav = { dum: '', podlazi: '' }, radky = d.querySelectorAll('.tabulka tbody tr'), pocet = f.querySelector('[data-pocet]');
+    var stav = { dum: 'I', podlazi: '' }, radky = d.querySelectorAll('.tabulka tbody tr'), pocet = f.querySelector('[data-pocet]');
     f.addEventListener('click', function (e) {
       var b = e.target.closest('button'); if (!b) return;
       stav[b.dataset.f] = b.dataset.v;

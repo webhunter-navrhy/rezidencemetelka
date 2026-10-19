@@ -205,23 +205,31 @@
       </div>
       <p class="vetsi">Interiér vzorového bytu navrhlo studio VDEKOR Interiors. Klidná paleta, ve které vynikne nábytek i&nbsp;umění, a&nbsp;materiály, které vydrží.</p>
     </div>
-    <ul class="materialy" role="list">
-      {% for m in data.materialy %}
-      <li class="material" data-reveal data-reveal-delay="{{ loop.index0 % 3 }}">
-        <span class="material__vzorek{% if m.get("vzor") %} material__vzorek--{{ m.vzor }}{% endif %}" style="--barva: {{ m.barva }}" aria-hidden="true"></span>
-        <h3>{{ m.nazev }}</h3>
-        <p>{{ m.popis }}</p>
-      </li>
-      {% endfor %}
-    </ul>
+    {% set hlavni = data.galerie[0] %}
+    <div class="vzor__sklad">
+      <figure class="vzor__hlavni" data-reveal>
+        <div class="deska">{{ img(hlavni.soubor, hlavni.alt, sizes='(min-width: 64rem) 44vw, 100vw', cls='foto') }}</div>
+        <figcaption>{{ hlavni.popisek }}</figcaption>
+      </figure>
+      <ul class="materialy" role="list">
+        {% for m in data.materialy %}
+        <li class="material" data-reveal data-reveal-delay="{{ loop.index0 % 3 }}">
+          <span class="material__vzorek{% if m.get("vzor") %} material__vzorek--{{ m.vzor }}{% endif %}" style="--barva: {{ m.barva }}" aria-hidden="true"></span>
+          <div><h3>{{ m.nazev }}</h3><p>{{ m.popis }}</p></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% if data.galerie|length > 1 %}
     <div class="galerie">
-      {% for g in data.galerie %}
+      {% for g in data.galerie[1:] %}
       <figure class="galerie__{{ g.tvar }}" data-reveal data-reveal-delay="{{ loop.index0 % 2 }}">
         <div class="deska">{{ img(g.soubor, g.alt, sizes=g.sizes, cls='foto') }}</div>
         <figcaption>{{ g.popisek }}</figcaption>
       </figure>
       {% endfor %}
     </div>
+    {% endif %}
     <p class="vzor__pozn">Vizualizace jsou ilustrační a&nbsp;vycházejí z&nbsp;výběru materiálů a&nbsp;nábytku pro vzorový byt. Co přesně je součástí standardu bytu, vám rádi upřesníme.</p>
   </div>
 </section>
@@ -238,8 +246,7 @@
     </div>
     <div class="filtr" data-filtr>
       <div class="filtr__skupina" role="group" aria-label="Dům">
-        <button type="button" aria-pressed="true" data-f="dum" data-v="">Oba domy</button>
-        <button type="button" aria-pressed="false" data-f="dum" data-v="I">K&nbsp;Metelce I</button>
+        <button type="button" aria-pressed="true" data-f="dum" data-v="I">K&nbsp;Metelce I</button>
         <button type="button" aria-pressed="false" data-f="dum" data-v="II">K&nbsp;Metelce II</button>
       </div>
       <div class="filtr__skupina" role="group" aria-label="Podlaží">
@@ -247,7 +254,7 @@
         <button type="button" aria-pressed="false" data-f="podlazi" data-v="přízemí">Přízemí se zahrádkou</button>
         <button type="button" aria-pressed="false" data-f="podlazi" data-v="patro">Podkroví s balkonem</button>
       </div>
-      <p class="filtr__pocet" aria-live="polite"><span data-pocet>32</span> bytů</p>
+      <p class="filtr__pocet" aria-live="polite"><span data-pocet>16</span> bytů</p>
     </div>
     <p class="cenik__spolecne">Všechny byty: dispozice 2+kk, 47,21&nbsp;m², sklepní kóje 3&nbsp;m² a&nbsp;parkovací stání.</p>
     <div class="tabulka-obal">
@@ -258,7 +265,7 @@
         <tbody>
           {% for b in byty %}
           {% set oznaceni = b.dum ~ '/' ~ b.cislo %}
-          <tr data-dum="{{ b.dum }}" data-podlazi="{{ b.podlazi }}">
+          <tr data-dum="{{ b.dum }}" data-podlazi="{{ b.podlazi }}"{% if b.dum != 'I' %} hidden{% endif %}>
             <th scope="row"><span class="tabulka__dum">K Metelce {{ b.dum }}</span> byt {{ b.cislo }}</th>
             <td data-l="Podlaží">{{ 'přízemí' if b.podlazi == 'přízemí' else 'podkroví' }}</td>
             <td data-l="Dispozice">{{ b.dispozice }}</td>
@@ -286,8 +293,9 @@
       <div class="vizitka">
         <p class="vizitka__jmeno">{{ site.kontakt.jmeno }}</p>
         <p class="vizitka__role">prodej bytů</p>
-        <p>{% if site.kontakt.telefon %}<a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a>{% else %}<span class="doplnime">telefon doplníme</span>{% endif %}</p>
-        <p>{% if site.kontakt.email %}<a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a>{% else %}<span class="doplnime">e-mail doplníme</span>{% endif %}</p>
+        {% if site.kontakt.telefon %}<p><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></p>{% endif %}
+        {% if site.kontakt.email %}<p><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a></p>{% endif %}
+        {% if not site.kontakt.telefon and not site.kontakt.email %}<p class="doplnime">Telefon a e-mail doplníme</p>{% endif %}
         <p class="vizitka__adresa">K&nbsp;Metelce, 503&nbsp;11 Hradec Králové<br><a href="https://mapy.com/?q=K%20Metelce%2C%20Hradec%20Kr%C3%A1lov%C3%A9" rel="noopener" target="_blank">Ukázat na mapě</a></p>
       </div>
     </div>

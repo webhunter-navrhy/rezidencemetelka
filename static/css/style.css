@@ -173,7 +173,7 @@ button { font: inherit; color: inherit; }
 .obalka__fakta div { padding: 1rem 1.6rem 0 0; margin-right: 1.6rem; border-right: 1px solid var(--linka); }
 .obalka__fakta div:last-child { border-right: 0; margin-right: 0; }
 .obalka__fakta dt { font: 400 .68rem/1.3 var(--sans); letter-spacing: .26em; text-transform: uppercase; color: var(--zlata-tmava); margin-bottom: .4rem; }
-.obalka__fakta dd { margin: 0; font: 400 1.06rem/1.35 var(--serif); color: var(--inkoust); }
+.obalka__fakta dd { margin: 0; font: 400 1rem/1.4 var(--sans); color: var(--inkoust); }
 .obalka__akce { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2rem; }
 .obalka__foto { margin: 0; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
 .obalka__foto .deska { flex: 1; min-height: 22rem; max-height: 46rem; }
@@ -224,7 +224,7 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
 .jr ul { margin: 0; padding: 0; list-style: none; }
 .jr li { display: grid; grid-template-columns: 1fr auto; align-items: baseline; column-gap: 1rem; padding: 1rem 0 .9rem; border-bottom: 1px solid var(--linka-jemna); }
 .jr__misto { color: var(--inkoust); line-height: 1.35; }
-.jr__cas { font: 400 1.5rem/1 var(--serif); color: var(--inkoust); font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.jr__cas { font: 400 1.2rem/1 var(--sans); letter-spacing: .02em; color: var(--inkoust); font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
 .jr__km { grid-column: 1 / -1; font-size: .78rem; color: var(--tlumeny); letter-spacing: .04em; }
 @media (max-width: 1020px) { .jizdni-rad { grid-template-columns: 1fr; } .jizdni-rad__hlava p { max-width: 50ch; } }
 @media (max-width: 760px) { .jizdni-rad__sloupce { grid-template-columns: 1fr; gap: 2.6rem; } }
@@ -245,7 +245,7 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
 .patro h3 { font-size: clamp(1.9rem, 3vw, 2.6rem); margin-bottom: 1.6rem; }
 .patro__cislo { font-size: .92rem; color: var(--tlumeny); padding-bottom: 1.4rem; border-bottom: 1px solid var(--linka); margin-bottom: 1.4rem; }
 .patro__cislo span { font: 400 clamp(2.6rem, 4.5vw, 3.8rem)/1 var(--serif); color: var(--inkoust); letter-spacing: -.02em; margin-right: .2rem; }
-.patro__cena { margin: 1.8rem 0 0; font: 400 1.35rem/1 var(--serif); color: var(--inkoust); }
+.patro__cena { margin: 1.8rem 0 0; font: 400 1.3rem/1 var(--sans); letter-spacing: .02em; color: var(--inkoust); }
 .patro__cena::before { content: "Cena"; display: block; margin-bottom: .6rem; font: 400 .68rem/1 var(--sans); letter-spacing: .26em; text-transform: uppercase; color: var(--zlata-tmava); }
 @media (max-width: 760px) { .patra { grid-template-columns: 1fr; } }
 
@@ -293,7 +293,7 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
 }
 .pudorys__tlacitka button:hover { color: var(--inkoust); }
 .pudorys__tlacitka button[aria-selected="true"] { color: var(--inkoust); padding-left: .9rem; box-shadow: inset 1px 0 0 var(--zlata); }
-.pudorys__m2 { font: 400 1.05rem/1 var(--serif); letter-spacing: 0; text-transform: none; font-variant-numeric: lining-nums tabular-nums; }
+.pudorys__m2 { font: 400 .95rem/1 var(--sans); letter-spacing: 0; text-transform: none; font-variant-numeric: lining-nums tabular-nums; }
 .pudorys__velke { margin: 0 0 .6rem; font-size: 1.1rem; color: var(--tlumeny); }
 .pudorys__velke span { font: 400 clamp(3.4rem, 6vw, 5rem)/1 var(--serif); color: var(--inkoust); letter-spacing: -.03em; }
 .pudorys__detail h3 { margin-bottom: 1.1rem; }
@@ -305,14 +305,19 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
 
 /* ---------- Vzorový byt ---------- */
 .vzor { background: var(--papir); border-top: 1px solid var(--linka); }
-.materialy { margin: 0 0 clamp(4rem, 8vw, 7rem); padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.5rem clamp(1.25rem, 2.5vw, 2.5rem); }
-.material__vzorek { display: block; aspect-ratio: 1; margin-bottom: 1.4rem; background: var(--barva); border: 1px solid var(--linka); outline: 1px solid rgba(176, 141, 87, .2); outline-offset: 6px; }
+.vzor__sklad { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: center; }
+.vzor__hlavni { margin: 0; }
+.vzor__hlavni .deska { aspect-ratio: 6 / 7; }
+.vzor__hlavni img { width: 100%; height: 100%; object-fit: cover; }
+.materialy { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--zlata); }
+.material { display: grid; grid-template-columns: clamp(4.5rem, 7vw, 6rem) 1fr; gap: 1.5rem; align-items: center; padding: 1.6rem 0; border-bottom: 1px solid var(--linka-jemna); }
+.material__vzorek { display: block; aspect-ratio: 1; background: var(--barva); border: 1px solid var(--linka); outline: 1px solid rgba(176, 141, 87, .22); outline-offset: 4px; }
 .material__vzorek--rybi { background: url(../rybi-kost.jpg) center / cover, var(--barva); }
-.material h3 { font-size: 1.3rem; margin-bottom: .6rem; }
+.material h3 { font-size: 1.35rem; margin-bottom: .35rem; }
 .material p { font-size: .92rem; color: var(--tlumeny); margin: 0; }
-@media (max-width: 960px) { .materialy { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .vzor__sklad { grid-template-columns: 1fr; } .vzor__hlavni .deska { aspect-ratio: 4 / 5; } }
 
-.galerie { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 3rem); align-items: start; }
+.galerie { margin-top: clamp(4rem, 8vw, 7rem); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 3rem); align-items: start; }
 .galerie figure { margin: 0; }
 .galerie img { width: 100%; height: 100%; object-fit: cover; }
 .galerie__siroka { grid-column: span 7; }
@@ -321,7 +326,7 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
 .galerie__vysoka .deska { aspect-ratio: 6 / 7; }
 .galerie > :nth-child(3n+2) { margin-top: clamp(0rem, 8vw, 8rem); }
 .galerie > :only-child { grid-column: 3 / span 8; margin-top: 0; }
-.vzor__pozn { margin: clamp(3rem, 6vw, 5rem) 0 0; font-size: .86rem; color: var(--tlumeny); max-width: 70ch; }
+.vzor__pozn { margin: clamp(2rem, 4vw, 3rem) 0 0; font-size: .86rem; color: var(--tlumeny); max-width: 70ch; }
 @media (max-width: 760px) { .galerie > * { grid-column: 1 / -1 !important; margin-top: 0 !important; } }
 
 /* ---------- Ceník ---------- */
@@ -339,10 +344,10 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
 .tabulka th, .tabulka td { padding: .85rem .8rem; text-align: left; border-bottom: 1px solid var(--linka-jemna); white-space: nowrap; }
 .tabulka thead th { font: 400 .68rem/1.3 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--zlata-tmava); padding-top: 1.4rem; white-space: normal; }
 .tabulka .c { text-align: right; }
-.tabulka tbody th { font: 400 1.05rem/1.2 var(--serif); color: var(--inkoust); }
+.tabulka tbody th { font: 400 1rem/1.2 var(--sans); color: var(--inkoust); }
 .tabulka__dum { display: block; font: 400 .68rem/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--tlumeny); margin-bottom: .35rem; }
 .tabulka td { color: var(--inkoust); }
-.tabulka__cena { font: 400 1.1rem/1 var(--serif); }
+.tabulka__cena { font: 400 1.05rem/1 var(--sans); letter-spacing: .02em; }
 .tabulka tbody tr { transition: background .25s var(--ease); }
 .tabulka tbody tr:hover { background: rgba(245, 240, 232, .7); }
 .tabulka__akce a { display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0 1rem; border: 1px solid var(--zlata); text-decoration: none; font: 400 .68rem/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--inkoust); transition: all .3s var(--ease); }
@@ -350,7 +355,7 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
 .tabulka tr[hidden] { display: none; }
 @media (max-width: 860px) {
   .filtr { gap: .9rem; }
-  .filtr__skupina { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; gap: .4rem; }
+  .filtr__skupina { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); width: 100%; gap: .4rem; }
   .filtr button { padding: .6rem .4rem; font-size: .62rem; letter-spacing: .1em; line-height: 1.25; }
   .filtr__pocet { margin-left: 0; width: 100%; }
   .tabulka thead { display: none; }
@@ -358,13 +363,13 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
   .tabulka tbody tr { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .35rem 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--linka); }
   .tabulka tbody tr[hidden] { display: none; }
   .tabulka th, .tabulka td { border: 0; padding: 0; white-space: normal; }
-  .tabulka tbody th { font-size: 1.25rem; }
+  .tabulka tbody th { font-size: 1.1rem; }
   .tabulka td[data-l="Podlaží"], .tabulka td[data-l="Dispozice"], .tabulka td[data-l="Byt"], .tabulka td[data-l="Sklep"], .tabulka td[data-l="Celkem"] { display: none; }
   .tabulka td.c { text-align: left; }
   .tabulka td[data-l="Zahrádka"], .tabulka td[data-l="Balkon"] { grid-column: 1; grid-row: 2; font-size: .86rem; color: var(--tlumeny); }
   .tabulka td[data-l="Zahrádka"]::before { content: "zahrádka "; }
   .tabulka td[data-l="Balkon"]::before { content: "balkon "; }
-  .tabulka__cena { grid-column: 2; grid-row: 1; text-align: right !important; font-size: 1.2rem; }
+  .tabulka__cena { grid-column: 2; grid-row: 1; text-align: right !important; font-size: 1.1rem; }
   .tabulka__akce { grid-column: 2; grid-row: 2; justify-self: end; }
   .tabulka__akce a { min-height: 2.6rem; }
 }
@@ -378,7 +383,7 @@ figcaption { margin-top: .9rem; font: 400 .74rem/1.5 var(--sans); letter-spacing
 .vizitka__role { font: 400 .7rem/1 var(--sans) !important; letter-spacing: .26em; text-transform: uppercase; color: var(--zlata-tmava) !important; margin-bottom: 1.4rem !important; }
 .vizitka__adresa { margin-top: 1.4rem !important; color: var(--tlumeny) !important; }
 .vizitka a { display: inline-flex; align-items: center; min-height: 2.75rem; }
-.doplnime { display: inline-block; padding: .15rem .6rem; border: 1px dashed var(--zlata); font-size: .85rem; color: var(--tlumeny); }
+.doplnime { font-size: .9rem; color: var(--tlumeny) !important; font-style: italic; }
 .formular { display: grid; gap: 1.3rem; padding: clamp(1.75rem, 4vw, 3rem); background: var(--bez); border: 1px solid var(--linka); }
 .pole-radek { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; }
 .pole span { display: block; margin-bottom: .45rem; font: 400 .68rem/1.3 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--zlata-tmava); }
