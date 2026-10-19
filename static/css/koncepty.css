@@ -1,0 +1,254 @@
+/* Varianty úvodu A/B/C – písma */
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/bodonimoda-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/bodonimoda-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(../fonts/bodonimoda-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(../fonts/bodonimoda-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  src: url(../fonts/jost-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  src: url(../fonts/jost-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Albert Sans';
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  src: url(../fonts/albertsans-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Albert Sans';
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  src: url(../fonts/albertsans-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/ebgaramond-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/ebgaramond-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(../fonts/ebgaramond-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(../fonts/ebgaramond-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Gilda Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/gildadisplay-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Gilda Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/gildadisplay-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- společné ---------- */
+:root {
+  --papir: #F4EFE7; --bez: #E9E1D4; --zlata: #B08D57; --zlata-tmava: #7A5D33; --inkoust: #1D1A17; --tlumeny: #6E655C;
+  --ease: cubic-bezier(.22, .61, .36, 1); --okraj: clamp(1.25rem, 3.4vw, 3rem);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--papir); color: var(--inkoust); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p { margin: 0; font-weight: 400; }
+:focus-visible { outline: 1px solid var(--zlata-tmava); outline-offset: 4px; }
+.js [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js [data-reveal] { opacity: 1; transform: none; transition: none; } }
+.prepinac { position: fixed; right: 1rem; bottom: 1rem; z-index: 99; display: flex; align-items: center; gap: .25rem; padding: .35rem .35rem .35rem .9rem; background: rgba(29, 26, 23, .9); color: #F4EFE7; font: 400 .7rem/1 "Jost", sans-serif; letter-spacing: .18em; text-transform: uppercase; }
+.prepinac a { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border: 1px solid rgba(244, 239, 231, .25); }
+.prepinac a[aria-current] { background: var(--zlata); border-color: var(--zlata); color: var(--inkoust); }
+.prepinac span { margin-right: .5rem; }
+
+/* ================= A · fotka přes celou obrazovku, text na stěně ================= */
+.ka { font: 300 1rem/1.7 "Jost", sans-serif; }
+.ka-hlava { position: absolute; inset: 0 0 auto; z-index: 3; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 1.7rem var(--okraj); }
+.ka-znacka { font: 400 .82rem/1 "Jost", sans-serif; letter-spacing: .34em; text-transform: uppercase; }
+.ka-znacka span { color: var(--zlata); margin: 0 .3em; }
+.ka-menu { display: flex; gap: 2.4rem; }
+.ka-menu a, .ka-kontakt { font: 400 .68rem/1 "Jost", sans-serif; letter-spacing: .24em; text-transform: uppercase; }
+.ka-kontakt { justify-self: end; display: inline-flex; align-items: center; gap: .9rem; }
+.ka i { display: inline-block; width: 1.6rem; height: 1px; background: currentColor; transition: width .4s var(--ease); }
+.ka a:hover i { width: 2.4rem; }
+.ka-hero { position: relative; height: 100svh; min-height: 40rem; overflow: hidden; }
+.ka-hero__foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
+.ka-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(244, 239, 231, .55) 0%, rgba(244, 239, 231, .15) 38%, rgba(244, 239, 231, 0) 55%); pointer-events: none; }
+.ka-hero__text { position: absolute; z-index: 2; left: var(--okraj); top: 50%; transform: translateY(-46%); max-width: 48rem; }
+.ka-mini { font: 400 .68rem/1.8 "Jost", sans-serif; letter-spacing: .26em; text-transform: uppercase; color: var(--inkoust); }
+.ka-mini--tlumene { color: #4c443c; }
+.ka-hero h1 { margin: 1.6rem 0 2.2rem; font: 400 clamp(2.9rem, 6vw, 6.2rem)/1 "Gilda Display", serif; letter-spacing: -.025em; }
+.ka-hero h1 span { display: block; white-space: nowrap; }
+.ka-cara { display: block; width: 3rem; height: 1px; background: var(--zlata-tmava); margin-bottom: 1.8rem; }
+.ka-odkaz { display: inline-flex; align-items: center; gap: 1rem; margin-top: 2.4rem; font: 400 .7rem/1 "Jost", sans-serif; letter-spacing: .24em; text-transform: uppercase; padding-bottom: .5rem; border-bottom: 1px solid var(--zlata-tmava); }
+.ka-hero__pozn { position: absolute; z-index: 2; right: var(--okraj); bottom: 1.4rem; font-size: .7rem; letter-spacing: .1em; color: rgba(29, 26, 23, .6); }
+.ka-byty { padding: clamp(4rem, 8vw, 7rem) var(--okraj) clamp(5rem, 10vw, 9rem); }
+.ka-byty__hlava { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.4rem; }
+.ka-mini--odkaz { display: inline-flex; align-items: center; gap: .9rem; }
+.ka-byty__mrizka { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(1.25rem, 3vw, 2.5rem); align-items: start; }
+.ka-byt { margin: 0; }
+.ka-byt img { width: 100%; aspect-ratio: 4 / 3.3; object-fit: cover; }
+.ka-byt--velky img { aspect-ratio: 4 / 4.6; }
+.ka-byt figcaption { display: grid; grid-template-columns: 3rem 1fr; padding-top: 1.1rem; font: 400 .7rem/1.7 "Jost", sans-serif; letter-spacing: .2em; text-transform: uppercase; }
+.ka-byt figcaption span { color: var(--zlata-tmava); grid-row: span 2; }
+.ka-byt figcaption b { font-weight: 400; color: var(--inkoust); }
+.ka-byt figcaption em { font-style: normal; color: var(--tlumeny); letter-spacing: .12em; }
+.ka-byty__sloupec { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+.ka-byty__text { font: 400 clamp(1.4rem, 2.2vw, 2rem)/1.35 "Gilda Display", serif; max-width: 26ch; }
+@media (max-width: 900px) {
+  .ka-hlava { grid-template-columns: 1fr auto; } .ka-menu { display: none; }
+  .ka-hero__foto { object-position: 12% 50%; }
+  .ka-hero::after { background: linear-gradient(180deg, rgba(244, 239, 231, .7) 0%, rgba(244, 239, 231, .35) 45%, rgba(244, 239, 231, 0) 70%); }
+  .ka-hero__text { top: 7rem; transform: none; right: var(--okraj); }
+  .ka-byty__mrizka { grid-template-columns: 1fr; }
+}
+
+/* ================= B · papírový sloupec + fotka do kraje ================= */
+.kb { font: 300 1rem/1.7 "Albert Sans", sans-serif; }
+.kb-hero { display: grid; grid-template-columns: minmax(22rem, 36%) 1fr; min-height: 100svh; }
+.kb-hero__papir { position: relative; display: flex; flex-direction: column; padding: 2rem var(--okraj) 2.4rem; }
+.kb-znacka { font: 400 1.05rem/1 "EB Garamond", serif; letter-spacing: .3em; }
+.kb-hero__text { margin: auto 0; padding-block: 4rem; }
+.kb-hero h1 { font: 400 clamp(2.8rem, 4.6vw, 4.9rem)/1.02 "EB Garamond", serif; letter-spacing: -.02em; margin-bottom: 1.6rem; max-width: 12.5ch; }
+.kb-perex { font-size: clamp(1rem, 1.2vw, 1.15rem); line-height: 1.6; color: #3d3630; max-width: 30ch; margin-bottom: 2.6rem; }
+.kb-odkaz { display: inline-flex; align-items: center; gap: 1rem; font: 500 .68rem/1 "Albert Sans", sans-serif; letter-spacing: .22em; text-transform: uppercase; }
+.kb-odkaz i, .kb-menu i { display: inline-block; width: 2.6rem; height: 1px; background: var(--zlata-tmava); }
+.kb-svisle { font: 400 .62rem/2 "Albert Sans", sans-serif; letter-spacing: .26em; text-transform: uppercase; color: var(--tlumeny); }
+.kb-hero__foto { position: relative; overflow: hidden; }
+.kb-hero__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 55%; }
+.kb-menu { position: absolute; z-index: 2; top: 0; left: 0; right: 0; display: flex; justify-content: flex-end; align-items: center; gap: 2.2rem; padding: 2rem var(--okraj); font: 400 .78rem/1 "Albert Sans", sans-serif; color: var(--inkoust); }
+.kb-menu::before { content: ""; position: absolute; inset: 0 0 -3rem; background: linear-gradient(rgba(244, 239, 231, .75), rgba(244, 239, 231, 0)); z-index: -1; }
+.kb-foto-popis { position: absolute; z-index: 2; right: var(--okraj); bottom: 2rem; text-align: right; font: 400 .62rem/2 "Albert Sans", sans-serif; letter-spacing: .26em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 12px rgba(0, 0, 0, .35); }
+.kb-lokalita { padding: clamp(4rem, 8vw, 7rem) var(--okraj) clamp(5rem, 10vw, 9rem); }
+.kb-lokalita__hlava { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2.6rem; }
+.kb-lokalita h2 { font: 400 clamp(2.4rem, 4.2vw, 4rem)/1 "EB Garamond", serif; letter-spacing: -.02em; }
+.kb-lokalita__hlava p { color: var(--tlumeny); font-size: .92rem; }
+.kb-lokalita__mrizka { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.kb-lokalita figure { margin: 0; }
+.kb-lokalita figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.kb-lokalita figcaption { margin-top: .8rem; font-size: .72rem; color: var(--tlumeny); letter-spacing: .04em; }
+.kb-casy { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--zlata); }
+.kb-casy li { display: grid; grid-template-columns: 7.5rem 1fr; align-items: baseline; padding: 1.25rem 0; border-bottom: 1px solid rgba(29, 26, 23, .12); }
+.kb-casy b { font: 400 2rem/1 "EB Garamond", serif; font-variant-numeric: lining-nums; }
+.kb-casy span { font-size: 1.02rem; color: #3d3630; }
+@media (max-width: 900px) {
+  .kb-hero { grid-template-columns: 1fr; }
+  .kb-hero__papir { min-height: 0; } .kb-hero__text { padding-block: 3rem 2rem; } .kb-svisle { display: none; }
+  .kb-hero__foto { min-height: 70svh; } .kb-menu { display: none; }
+  .kb-lokalita__mrizka { grid-template-columns: 1fr; }
+  .kb-lokalita__hlava { flex-direction: column; align-items: start; }
+}
+
+/* ================= C · titul nad fotkou v rámu ================= */
+.kc { font: 300 1rem/1.7 "Jost", sans-serif; }
+.kc-hero { padding: 1.6rem clamp(.75rem, 1.6vw, 1.5rem) 0; text-align: center; }
+.kc-nad { font: 400 .7rem/1 "Jost", sans-serif; letter-spacing: .4em; text-transform: uppercase; color: var(--zlata-tmava); }
+.kc-titul { margin: .6rem 0 1.4rem; font: 400 clamp(2.4rem, 6.6vw, 7.4rem)/.95 "Bodoni Moda", serif; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; }
+.kc-ram { position: relative; height: min(76svh, 54rem); min-height: 30rem; overflow: hidden; text-align: left; }
+.kc-ram__foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+.kc-ram::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20, 16, 12, .5) 0%, rgba(20, 16, 12, .18) 45%, rgba(20, 16, 12, 0) 70%); }
+.kc-menu { position: absolute; z-index: 2; top: 0; left: 0; right: 0; background: linear-gradient(rgba(20, 16, 12, .42), rgba(20, 16, 12, 0)); text-shadow: 0 1px 10px rgba(0, 0, 0, .3); display: flex; justify-content: space-between; align-items: center; padding: 1.6rem clamp(1.5rem, 4vw, 3.5rem); color: #F4EFE7; }
+.kc-menu span { font: 400 1.05rem/1 "Bodoni Moda", serif; letter-spacing: .2em; text-transform: uppercase; }
+.kc-menu nav { display: flex; gap: 2rem; font: 400 .74rem/1 "Jost", sans-serif; letter-spacing: .14em; }
+.kc-ram__text { position: absolute; z-index: 2; left: clamp(1.5rem, 4vw, 3.5rem); bottom: clamp(2rem, 6vw, 4.5rem); color: #F4EFE7; max-width: 34rem; }
+.kc-ram h1 { font: 400 clamp(2.4rem, 4.6vw, 4.4rem)/1.04 "Bodoni Moda", serif; letter-spacing: -.02em; margin-bottom: 1.2rem; }
+.kc-ram__text p { font-size: 1.05rem; max-width: 28ch; color: rgba(244, 239, 231, .9); margin-bottom: 2rem; }
+.kc-kulate { display: grid; place-items: center; width: 3.2rem; height: 3.2rem; border: 1px solid rgba(205, 178, 135, .9); border-radius: 50%; color: #E8D7B5; font-size: 1.1rem; }
+.kc-vyhody { padding: clamp(4rem, 7vw, 6rem) clamp(1.5rem, 4vw, 3.5rem) clamp(5rem, 10vw, 8rem); }
+.kc-vyhody__hlava { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2.6rem; }
+.kc-vyhody h2 { font: 400 clamp(2rem, 3.4vw, 3.2rem)/1.05 "Bodoni Moda", serif; letter-spacing: -.02em; }
+.kc-vyhody__hlava p { text-align: right; font-size: .9rem; color: var(--tlumeny); }
+.kc-vyhody__rada { margin: 0 0 clamp(4rem, 8vw, 7rem); padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--zlata); }
+.kc-vyhody__rada li { padding: 2rem clamp(1rem, 2vw, 2rem) 0; border-left: 1px solid rgba(176, 141, 87, .4); text-align: center; }
+.kc-vyhody__rada li:first-child { border-left: 0; }
+.kc-vyhody__rada b { display: block; font: 400 clamp(2.2rem, 3.4vw, 3.2rem)/1 "Bodoni Moda", serif; color: var(--zlata-tmava); margin-bottom: .6rem; }
+.kc-vyhody__rada h3 { font: 400 .74rem/1.4 "Jost", sans-serif; letter-spacing: .24em; text-transform: uppercase; margin-bottom: .9rem; }
+.kc-vyhody__rada p { font-size: .92rem; color: var(--tlumeny); max-width: 24ch; margin-inline: auto; }
+.kc-byt { display: grid; grid-template-columns: .8fr 1.6fr .8fr; gap: clamp(1.5rem, 3vw, 3rem); align-items: center; background: var(--bez); padding: clamp(1.5rem, 3vw, 3rem); }
+.kc-byt h2 { margin-bottom: 1rem; }
+.kc-byt__text p { color: #3d3630; margin-bottom: 1.8rem; }
+.kc-odkaz { display: inline-block; padding: 1rem 1.8rem; border: 1px solid var(--zlata); font: 400 .7rem/1 "Jost", sans-serif; letter-spacing: .22em; text-transform: uppercase; }
+.kc-byt__plan { width: 100%; background: #fff; padding: 1rem; }
+.kc-byt__foto { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+@media (max-width: 900px) {
+  .kc-titul { font-size: 13.5vw; white-space: normal; line-height: 1; }
+  .kc-menu nav { display: none; }
+  .kc-ram { height: 78svh; }
+  .kc-ram__foto { object-position: 62% 60%; }
+  .kc-ram::after { background: linear-gradient(0deg, rgba(20, 16, 12, .62) 0%, rgba(20, 16, 12, .2) 50%, rgba(20, 16, 12, 0) 75%); }
+  .kc-vyhody__rada { grid-template-columns: 1fr 1fr; row-gap: 2.4rem; }
+  .kc-vyhody__rada li:nth-child(3) { border-left: 0; }
+  .kc-vyhody__hlava { flex-direction: column; align-items: start; } .kc-vyhody__hlava p { text-align: left; }
+  .kc-byt { grid-template-columns: 1fr; } .kc-byt__foto { display: none; }
+}

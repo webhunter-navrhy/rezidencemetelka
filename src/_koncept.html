@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ titulek }}</title>
+<meta name="description" content="Varianta úvodu webu Rezidence Metelka k výběru.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="stylesheet" href="{{ asset('css/koncepty.css') }}">
+<link rel="icon" href="{{ base }}favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="{{ trida }}">
+{% block obsah %}{% endblock %}
+<nav class="prepinac" aria-label="Varianty úvodu">
+  <span>Varianta</span>
+  <a href="{{ url('koncept-a') }}"{% if trida == 'ka' %} aria-current="page"{% endif %}>A</a>
+  <a href="{{ url('koncept-b') }}"{% if trida == 'kb' %} aria-current="page"{% endif %}>B</a>
+  <a href="{{ url('koncept-c') }}"{% if trida == 'kc' %} aria-current="page"{% endif %}>C</a>
+</nav>
+<script>
+  (function () {
+    var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (z) { z.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' }) : null;
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { io ? io.observe(el) : el.classList.add('is-in'); });
+  })();
+</script>
+</body>
+</html>

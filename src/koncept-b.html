@@ -1,0 +1,42 @@
+{% extends "_koncept.html" %}
+{% set titulek = 'Rezidence Metelka – varianta B' %}
+{% set trida = 'kb' %}
+{% block obsah %}
+{# B · podle pinu 146 (STILL STUDIO): papírový sloupec vlevo, fotka do kraje vpravo, svislý popisek #}
+<section class="kb-hero">
+  <div class="kb-hero__papir">
+    <a class="kb-znacka" href="#">REZIDENCE METELKA</a>
+    <div class="kb-hero__text">
+      <h1>Domov pár minut od&nbsp;centra Hradce.</h1>
+      <p class="kb-perex">Třicet dva bytů 2+kk se zahrádkou nebo balkonem. Klidná ulice K&nbsp;Metelce, rychle u&nbsp;D11.</p>
+      <a class="kb-odkaz" href="#">Zobrazit ceník <i></i></a>
+    </div>
+    <p class="kb-svisle">K&nbsp;Metelce I<br>K&nbsp;Metelce II<br>Hradec Králové</p>
+  </div>
+  <div class="kb-hero__foto">
+    <nav class="kb-menu"><a href="#">Lokalita</a><a href="#">Byty</a><a href="#">Ceník</a><a href="#">Kontakt</a><i></i></nav>
+    {{ img('viz-loznice-okno.jpg', 'Vizualizace ložnice u okna s rámem ve zlatém dubu a lněným závěsem', sizes='(min-width: 60rem) 64vw, 100vw') }}
+    <p class="kb-foto-popis">Okna s&nbsp;trojsklem<br>rám zlatý dub</p>
+  </div>
+</section>
+<section class="kb-lokalita">
+  <div class="kb-lokalita__hlava">
+    <h2>Všude blízko</h2>
+    <p>Orientační časy autem z&nbsp;ulice K&nbsp;Metelce.</p>
+  </div>
+  <div class="kb-lokalita__mrizka">
+    <figure data-reveal>
+      {{ img('hk-prazsky-most.jpg', 'Pražský most přes Labe s Bílou věží', sizes='(min-width: 60rem) 44vw, 100vw') }}
+      <figcaption>Pražský most a&nbsp;Bílá věž · foto Michielverbeek, CC BY-SA</figcaption>
+    </figure>
+    <ul class="kb-casy" role="list" data-reveal>
+      <li><b>5 min</b><span>Hlavní nádraží</span></li>
+      <li><b>8 min</b><span>Zimní stadion a&nbsp;tenis centrum</span></li>
+      <li><b>9 min</b><span>Velké náměstí</span></li>
+      <li><b>13 min</b><span>Golf v&nbsp;Roudničce</span></li>
+      <li><b>4 km</b><span>Nájezd na dálnici D11</span></li>
+      <li><b>80 min</b><span>Praha</span></li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

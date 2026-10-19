@@ -1,0 +1,40 @@
+{% extends "_koncept.html" %}
+{% set titulek = 'Rezidence Metelka – varianta C' %}
+{% set trida = 'kc' %}
+{% block obsah %}
+{# C · podle pinu 144 (УРОВЕНЬ): velký titul nad fotkou, fotka v rámu, pod ní řada výhod projektu #}
+<section class="kc-hero">
+  <p class="kc-nad">Byty 2+kk&ensp;/&ensp;Hradec Králové</p>
+  <p class="kc-titul" aria-hidden="true">Rezidence Metelka</p>
+  <div class="kc-ram">
+    {{ img('viz-obyvak.jpg', 'Vizualizace obývacího pokoje s kuchyní, dub v rybí kosti a skříně v odstínu kašmír', sizes='100vw', cls='kc-ram__foto') }}
+    <header class="kc-menu"><span>Rezidence Metelka</span><nav><a href="#">Lokalita</a><a href="#">Byty</a><a href="#">Ceník</a><a href="#">Kontakt</a></nav></header>
+    <div class="kc-ram__text">
+      <h1>Město začíná<br>za vašimi dveřmi</h1>
+      <p>32 bytů 2+kk ve dvou nových domech, 9&nbsp;minut od Velkého náměstí.</p>
+      <a href="#" class="kc-kulate" aria-label="Pokračovat dolů">↓</a>
+    </div>
+  </div>
+</section>
+<section class="kc-vyhody">
+  <div class="kc-vyhody__hlava">
+    <h2>Proč K&nbsp;Metelce</h2>
+    <p>Klid rezidenční čtvrti<br>a&nbsp;krajské město po ruce.</p>
+  </div>
+  <ul class="kc-vyhody__rada" role="list">
+    <li data-reveal><b>9 min</b><h3>do centra</h3><p>Velké náměstí, divadlo, univerzita i&nbsp;fakultní nemocnice do deseti minut autem.</p></li>
+    <li data-reveal><b>8 min</b><h3>na sport</h3><p>Zimní stadion, tenis centrum, Malšovická aréna a&nbsp;golf v&nbsp;Roudničce.</p></li>
+    <li data-reveal><b>4 km</b><h3>k&nbsp;dálnici D11</h3><p>Pardubice za půl hodiny, Praha zhruba za osmdesát minut.</p></li>
+    <li data-reveal><b>47 m²</b><h3>a&nbsp;něco navíc</h3><p>Zahrádka až 55&nbsp;m² nebo balkon, sklep a&nbsp;vlastní parkovací stání.</p></li>
+  </ul>
+  <div class="kc-byt" data-reveal>
+    <div class="kc-byt__text">
+      <h2>Byt 2+kk</h2>
+      <p>Obytná kuchyň 24,05&nbsp;m², ložnice 10,40&nbsp;m², koupelna s&nbsp;WC 6,99&nbsp;m² a&nbsp;chodba se skříněmi.</p>
+      <a href="#" class="kc-odkaz">Projít půdorys</a>
+    </div>
+    {{ img('pudorys-vzorovy-byt.jpg', 'Zařízený půdorys bytu 2+kk od studia VDEKOR Interiors', sizes='(min-width: 60rem) 50vw, 100vw', cls='kc-byt__plan') }}
+    {{ img('viz-kuchyne.jpg', 'Vizualizace kuchyně v odstínu kašmír s černou baterií', sizes='(min-width: 60rem) 22vw, 100vw', cls='kc-byt__foto') }}
+  </div>
+</section>
+{% endblock %}

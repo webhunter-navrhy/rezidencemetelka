@@ -1,0 +1,41 @@
+{% extends "_koncept.html" %}
+{% set titulek = 'Rezidence Metelka – varianta A' %}
+{% set trida = 'ka' %}
+{% block obsah %}
+{# A · podle pinu 125 (MONO / HABITAT): fotka přes celou obrazovku, text přímo na klidné stěně vlevo #}
+<header class="ka-hlava">
+  <a class="ka-znacka" href="#">Rezidence <span>/</span> Metelka</a>
+  <nav class="ka-menu"><a href="#">Lokalita</a><a href="#">Byty</a><a href="#">Vzorový byt</a><a href="#">Ceník</a></nav>
+  <a class="ka-kontakt" href="#">Kontakt <i></i></a>
+</header>
+<section class="ka-hero">
+  {{ img('viz-hero-obyvak.jpg', 'Vizualizace obývacího pokoje s kuchyní ve zlatém odpoledním světle', sizes='100vw', cls='ka-hero__foto') }}
+  <div class="ka-hero__text">
+    <p class="ka-mini">Byty 2+kk · Hradec Králové</p>
+    <h1><span>Bydlení, které</span> <span>má čas na vás.</span></h1>
+    <span class="ka-cara"></span>
+    <p class="ka-mini ka-mini--tlumene">32 bytů ve dvou domech K&nbsp;Metelce<br>9 minut od Velkého náměstí</p>
+    <a class="ka-odkaz" href="#">Prohlédnout byty <i></i></a>
+  </div>
+  <p class="ka-hero__pozn">Ilustrační vizualizace interiéru</p>
+</section>
+<section class="ka-byty">
+  <div class="ka-byty__hlava">
+    <p class="ka-mini">Dva typy bytů</p>
+    <a class="ka-mini ka-mini--odkaz" href="#">Celý ceník <i></i></a>
+  </div>
+  <div class="ka-byty__mrizka">
+    <figure class="ka-byt ka-byt--velky" data-reveal>
+      {{ img('viz-loznice.jpg', 'Vizualizace ložnice s čalouněnou postelí a mramorovou tapetou', sizes='(min-width: 60rem) 48vw, 100vw') }}
+      <figcaption><span>01</span><b>Přízemí se zahrádkou</b><em>Byty 1–8 · zahrádka 52–55 m² · 5 490 000 Kč</em></figcaption>
+    </figure>
+    <div class="ka-byty__sloupec">
+      <figure class="ka-byt" data-reveal>
+        {{ img('viz-koupelna.jpg', 'Vizualizace koupelny se sprchou za černou rastrovou stěnou', sizes='(min-width: 60rem) 40vw, 100vw') }}
+        <figcaption><span>02</span><b>Podkroví s balkonem</b><em>Byty 9–16 · balkon 7,8–8,25 m² · 4 990 000 Kč</em></figcaption>
+      </figure>
+      <p class="ka-byty__text" data-reveal>Každý byt má 47,21&nbsp;m², sklep a&nbsp;vlastní parkovací stání. Dub v&nbsp;rybí kosti, kuchyň v&nbsp;odstínu kašmír, koupelna s&nbsp;matně černými bateriemi.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
