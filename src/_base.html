@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ titulek or site.nazev }}</title>
+<meta name="description" content="{{ popis or site.popis }}">
+{% if site.navrh or noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<meta name="theme-color" content="{{ site.theme_color }}">
+<link rel="canonical" href="{{ site.url }}{{ cesta or '' }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="{{ titulek or site.nazev }}">
+<meta property="og:description" content="{{ popis or site.popis }}">
+<meta property="og:url" content="{{ site.url }}{{ cesta or '' }}">
+{% if og_url %}<meta property="og:image" content="{{ og_url }}">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">{% endif %}
+<link rel="preload" href="{{ base }}fonts/bodonimoda-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="icon" href="{{ base }}favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+{% block head %}{% endblock %}
+{% if jsonld %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endif %}
+</head>
+<body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<header class="hlavicka" data-hlavicka>
+  <div class="hlavicka__in">
+    <a href="{{ url('') }}" class="znacka" aria-label="{{ site.nazev }} – úvod">
+      <span class="znacka__a">Rezidence</span><span class="znacka__b">Metelka</span>
+    </a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="vh">Menu</span></button>
+    <nav id="menu" class="menu" aria-label="Hlavní">
+      {% for n in site.nav %}<a href="{{ n.href }}"{% if loop.last %} class="menu__cta"{% endif %}>{{ n.text }}</a>{% endfor %}
+    </nav>
+  </div>
+</header>
+<main id="obsah">
+{% block obsah %}{% endblock %}
+</main>
+<footer class="paticka">
+  <div class="wrap paticka__in">
+    <div>
+      <p class="znacka znacka--pata"><span class="znacka__a">Rezidence</span><span class="znacka__b">Metelka</span></p>
+      <p class="pata-adresa">K Metelce, 503&nbsp;11 Hradec Králové</p>
+    </div>
+    <div class="pata-pozn">
+      <p>Vizualizace interiéru jsou ilustrační a vycházejí z materiálů vzorového bytu. Ceny podle ceníku ze dne 16.&nbsp;9.&nbsp;2026.</p>
+      <p>Fotografie Hradce Králové: Wikimedia Commons, licence CC BY-SA – {% for f in data.fotky %}{{ f.autor }} ({{ f.co }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>
+    </div>
+  </div>
+</footer>
+<script src="{{ asset('js/main.js') }}" defer></script>
+</body>
+</html>

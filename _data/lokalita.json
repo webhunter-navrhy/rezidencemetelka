@@ -1,0 +1,23 @@
+{
+  "skupiny": [
+    {"nazev": "Město", "body": [
+      {"misto": "Hlavní nádraží", "cas": "5 min", "km": "2,5 km"},
+      {"misto": "Univerzita Hradec Králové", "cas": "7 min", "km": "3,7 km"},
+      {"misto": "Velké náměstí", "cas": "9 min", "km": "4,7 km"},
+      {"misto": "Fakultní nemocnice", "cas": "10 min", "km": "6,1 km"}
+    ]},
+    {"nazev": "Sport", "body": [
+      {"misto": "Zimní stadion", "cas": "8 min", "km": "4,4 km"},
+      {"misto": "Tenis centrum", "cas": "8 min", "km": "4,9 km"},
+      {"misto": "Malšovická aréna", "cas": "9 min", "km": "5,6 km"},
+      {"misto": "Park Golf Club Roudnička", "cas": "13 min", "km": "8 km"}
+    ]},
+    {"nazev": "Dálnice", "body": [
+      {"misto": "Nájezd na D11", "cas": "", "km": "4 km"},
+      {"misto": "Pardubice", "cas": "29 min", "km": "31 km"},
+      {"misto": "Praha", "cas": "80 min", "km": "113 km"},
+      {"misto": "Krkonoše, Špindlerův Mlýn", "cas": "85 min", "km": "81 km"}
+    ]}
+  ],
+  "poznamka": "Orientační časy autem z ulice K Metelce podle plánovače tras nad OpenStreetMap, mimo dopravní špičku."
+}

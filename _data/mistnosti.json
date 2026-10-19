@@ -1,0 +1,14 @@
+[
+  {"id": "obyvak", "nazev": "Kuchyň s obývacím pokojem", "plocha": "24,05", "body": [[600,115],[1125,115],[1125,595],[600,595]],
+   "text": "Největší a nejsvětlejší místnost bytu. Kuchyňská linka s myčkou, elektrickým sporákem a lednicí, vedle místo pro jídelní stůl a sedací soupravu.",
+   "vzor": "Ve vzorovém bytě: dub v rybí kosti, linka a skříně v dekoru Egger Kašmír, kulatý černý stůl."},
+  {"id": "loznice", "nazev": "Ložnice", "plocha": "10,40", "body": [[60,115],[360,115],[360,460],[60,460]],
+   "text": "Klidná ložnice s místem pro postel 180 × 200 cm a vestavěnými skříněmi po celé šířce.",
+   "vzor": "Ve vzorovém bytě: čalouněná postel v barvě ecru, tapeta Harlequin Marble za čelem postele."},
+  {"id": "koupelna", "nazev": "Koupelna s WC", "plocha": "6,99", "body": [[365,115],[578,115],[578,398],[445,398],[445,460],[365,460]],
+   "text": "Sprchový kout se žlabem, závěsné WC, umyvadlo na desce a otopný žebřík. Koupelna je temperovaná na 24 °C.",
+   "vzor": "Ve vzorovém bytě: dlažba Argenta Gravel Cream 60 × 60 a matně černé baterie Hansgrohe Rebris."},
+  {"id": "chodba", "nazev": "Chodba", "plocha": "5,77", "body": [[60,465],[445,465],[445,402],[592,402],[592,595],[60,595]],
+   "text": "Vstup s vestavěnými skříněmi a místem na lavici. Z chodby se jde do všech místností.",
+   "vzor": "Ve vzorovém bytě: dubová lavice, zrcadlo s tenkým černým rámem, LED podsvícená tapeta."}
+]

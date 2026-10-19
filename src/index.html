@@ -1,0 +1,299 @@
+{% extends "_base.html" %}
+{% set titulek = 'Rezidence Metelka – byty 2+kk na prodej, Hradec Králové' %}
+{% set cesta = '' %}
+{% set byty = data.byty %}
+{% block obsah %}
+
+{# ---------- OBÁLKA ---------- #}
+<section class="obalka" aria-labelledby="h-uvod">
+  <div class="obalka__ram">
+    <div class="obalka__text">
+      <p class="nadpisek">Hradec Králové · K&nbsp;Metelce</p>
+      <h1 id="h-uvod" class="obalka__h1"><span>Rezidence</span> <span>Metelka</span></h1>
+      <p class="obalka__perex">Třicet dva bytů 2+kk ve dvou nových domech. Pár minut od centra Hradce, sportovišť i&nbsp;dálnice D11.</p>
+      <dl class="obalka__fakta">
+        <div><dt>Domy</dt><dd>K&nbsp;Metelce I a II</dd></div>
+        <div><dt>Byt</dt><dd>47,21&nbsp;m² + zahrádka nebo balkon</dd></div>
+        <div><dt>Cena</dt><dd>od 4&nbsp;990&nbsp;000&nbsp;Kč</dd></div>
+      </dl>
+      <div class="obalka__akce">
+        <a class="btn" href="#cenik">Zobrazit ceník</a>
+        <a class="odkaz" href="#byt">Projít půdorys bytu</a>
+      </div>
+    </div>
+    <figure class="obalka__foto">
+      <div class="deska">{{ img('viz-obyvak.jpg', 'Vizualizace obývacího pokoje s kuchyní: podlaha z dubu v rybí kosti, skříně v odstínu kašmír, světlá pohovka', sizes='(min-width: 64rem) 46vw, 100vw') }}</div>
+      <figcaption>Ilustrační vizualizace obývacího pokoje podle materiálů vzorového bytu</figcaption>
+    </figure>
+  </div>
+</section>
+
+{# ---------- HRADEC ---------- #}
+<section class="sekce hradec" id="hradec" aria-labelledby="h-hradec">
+  <div class="wrap">
+    <div class="kapitola">
+      <p class="nadpisek">Lokalita</p>
+      <h2 id="h-hradec">Hradec Králové na dosah, ne za humny</h2>
+    </div>
+    <div class="hradec__uvod">
+      <p class="vetsi">Ulice K&nbsp;Metelce leží na severozápadním okraji Hradce Králové, mezi Svobodnými Dvory a&nbsp;Plotišti. Klidná rezidenční část města, ze které jste autem za pět minut na hlavním nádraží a&nbsp;za devět na Velkém náměstí.</p>
+      <p>Hradec si drží přezdívku salon republiky: Gočárovy a&nbsp;Kotěrovy stavby, nábřeží Labe, historické centrum s&nbsp;katedrálou a&nbsp;Bílou věží. Je to univerzitní a&nbsp;krajské město s&nbsp;fakultní nemocnicí, divadlem a&nbsp;vším, co ke každodennímu životu patří.</p>
+      <p>Kdo žije aktivně, má tu kam chodit: zimní stadion, Malšovická aréna, tenisové kurty, golfové hřiště v&nbsp;Roudničce a&nbsp;Hradubická labská cyklostezka až do Pardubic. A&nbsp;když je potřeba vyrazit dál, nájezd na dálnici D11 je asi čtyři kilometry od domu.</p>
+    </div>
+  </div>
+  <figure class="hradec__panorama" data-reveal>
+    {{ img('hk-katedrala.jpg', 'Historické centrum Hradce Králové z výšky s katedrálou svatého Ducha a Bílou věží', sizes='100vw', cls='foto') }}
+    <figcaption class="wrap">Historické centrum s&nbsp;katedrálou sv. Ducha · foto Vít Luštinec, CC BY-SA</figcaption>
+  </figure>
+  <div class="wrap">
+    <div class="jizdni-rad">
+      <div class="jizdni-rad__hlava">
+        <h3>Kolik je to odsud</h3>
+        <p>{{ data.lokalita.poznamka }}</p>
+      </div>
+      <div class="jizdni-rad__sloupce">
+        {% for s in data.lokalita.skupiny %}
+        <div class="jr" data-reveal data-reveal-delay="{{ loop.index0 }}">
+          <h4>{{ s.nazev }}</h4>
+          <ul role="list">
+            {% for b in s.body %}<li><span class="jr__misto">{{ b.misto }}</span><span class="jr__cas">{{ b.cas or b.km }}</span>{% if b.cas %}<span class="jr__km">{{ b.km }}</span>{% endif %}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="dvojice">
+      <figure data-reveal>
+        <div class="deska deska--siroka">{{ img('hk-prazsky-most.jpg', 'Pražský most přes Labe s Bílou věží v pozadí', sizes='(min-width: 64rem) 55vw, 100vw', cls='foto') }}</div>
+        <figcaption>Pražský most přes Labe · foto Michielverbeek, CC BY-SA</figcaption>
+      </figure>
+      <figure data-reveal data-reveal-delay="1">
+        <div class="deska deska--vysoka">{{ img('hk-cyklostezka.jpg', 'Lávka Hradubické labské cyklostezky přes rameno Labe', sizes='(min-width: 64rem) 32vw, 100vw', cls='foto') }}</div>
+        <figcaption>Hradubická labská cyklostezka · foto Vukin, CC BY-SA</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+{# ---------- DŮM ---------- #}
+<section class="sekce dum" id="dum" aria-labelledby="h-dum">
+  <div class="wrap">
+    <div class="kapitola kapitola--dve">
+      <div>
+        <p class="nadpisek">Dům</p>
+        <h2 id="h-dum">Dva domy, třicet dva bytů</h2>
+      </div>
+      <p class="vetsi">K&nbsp;Metelce I a&nbsp;K&nbsp;Metelce II jsou dva stejné domy o&nbsp;přízemí a&nbsp;podkroví. Každý má šestnáct bytů 2+kk. Ke každému bytu patří sklepní kóje a&nbsp;vlastní parkovací stání.</p>
+    </div>
+    <div class="patra">
+      <article class="patro" data-reveal>
+        <p class="patro__kde">Přízemí · byty 1–8</p>
+        <h3>Se zahrádkou</h3>
+        <p class="patro__cislo"><span>52–55</span>&nbsp;m² zahrádky</p>
+        <p>Byt 47,21&nbsp;m² s&nbsp;vlastní zahrádkou, sklepem 3&nbsp;m² a&nbsp;parkovacím stáním.</p>
+        <p class="patro__cena">5&nbsp;490&nbsp;000&nbsp;Kč</p>
+      </article>
+      <article class="patro" data-reveal data-reveal-delay="1">
+        <p class="patro__kde">Podkroví · byty 9–16</p>
+        <h3>S balkonem</h3>
+        <p class="patro__cislo"><span>7,8–8,25</span>&nbsp;m² balkonu</p>
+        <p>Byt 47,21&nbsp;m² pod šikmou střechou se světlou výškou až 3,2&nbsp;m, balkonem, sklepem a&nbsp;parkovacím stáním.</p>
+        <p class="patro__cena">4&nbsp;990&nbsp;000&nbsp;Kč</p>
+      </article>
+    </div>
+
+    <figure class="rez" data-rez>
+      <figcaption class="rez__hlava">
+        <h3>Řez domem</h3>
+        <p>Podle projektové dokumentace. Z&nbsp;čeho je dům postavený, od základů po střechu.</p>
+      </figcaption>
+      <div class="rez__plocha">
+        <svg class="rez__svg" viewBox="-200 -720 1500 900" role="img" aria-labelledby="rez-t">
+          <title id="rez-t">Příčný řez bytovým domem: přízemí, stropní panely, podkroví se dvěma pultovými střechami, šířka domu 11 metrů</title>
+          <defs>
+            <pattern id="srafa" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="14" class="rez__srafa"/></pattern>
+            <pattern id="vlna" width="20" height="10" patternUnits="userSpaceOnUse"><path d="M0 5 Q5 0 10 5 T20 5" class="rez__vlna"/></pattern>
+          </defs>
+          <g class="rez__cary">
+            <rect x="-200" y="30" width="1500" height="150" fill="url(#srafa)" class="rez__teren"/>
+            <line x1="-200" y1="30" x2="1300" y2="30" pathLength="1"/>
+            <rect x="-10" y="30" width="50" height="118" pathLength="1"/><rect x="525" y="30" width="50" height="118" pathLength="1"/><rect x="1060" y="30" width="50" height="118" pathLength="1"/>
+            <rect x="30" y="0" width="1040" height="26" fill="url(#vlna)" pathLength="1"/>
+            <rect x="0" y="-500" width="30" height="500" fill="url(#srafa)" pathLength="1"/>
+            <rect x="535" y="-640" width="30" height="640" fill="url(#srafa)" pathLength="1"/>
+            <rect x="1070" y="-552" width="30" height="552" fill="url(#srafa)" pathLength="1"/>
+            <rect x="-140" y="-281" width="1385" height="31" pathLength="1"/>
+            <polyline points="-130,-281 -130,-385 0,-385" pathLength="1"/><polyline points="1235,-281 1235,-385 1100,-385" pathLength="1"/>
+            <polygon points="-160,-470 552,-588 552,-560 -160,-442" fill="url(#vlna)" pathLength="1"/>
+            <polygon points="548,-650 1260,-552 1260,-524 548,-622" fill="url(#vlna)" pathLength="1"/>
+            <rect x="690" y="-205" width="160" height="150" pathLength="1"/><line x1="770" y1="-205" x2="770" y2="-55" pathLength="1"/>
+                        <line x1="0" y1="140" x2="1100" y2="140" class="rez__kota" pathLength="1"/>
+            <line x1="0" y1="128" x2="0" y2="152" class="rez__kota" pathLength="1"/><line x1="1100" y1="128" x2="1100" y2="152" class="rez__kota" pathLength="1"/>
+          </g>
+          <text x="550" y="128" class="rez__text" text-anchor="middle">11 000</text>
+          <text x="600" y="-662" class="rez__text">+6,46</text>
+          <text x="-190" y="18" class="rez__text">±0,00</text>
+          <g class="rez__body">
+            <g><circle cx="900" cy="-600" r="22"/><text x="900" y="-592" text-anchor="middle">1</text></g>
+            <g><circle cx="300" cy="-330" r="22"/><text x="300" y="-322" text-anchor="middle">2</text></g>
+            <g><circle cx="820" cy="-266" r="22"/><text x="820" y="-258" text-anchor="middle">3</text></g>
+            <g><circle cx="300" cy="-130" r="22"/><text x="300" y="-122" text-anchor="middle">4</text></g>
+            <g><circle cx="15" cy="-210" r="22"/><text x="15" y="-202" text-anchor="middle">5</text></g>
+            <g><circle cx="420" cy="13" r="22"/><text x="420" y="21" text-anchor="middle">6</text></g>
+            <g><circle cx="770" cy="-130" r="22"/><text x="770" y="-122" text-anchor="middle">7</text></g>
+          </g>
+        </svg>
+      </div>
+      <ol class="rez__legenda" role="list">
+        <li><b>1</b> Střecha z&nbsp;panelů Kingspan 180&nbsp;mm a&nbsp;čedičové vlny 220&nbsp;mm</li>
+        <li><b>2</b> Podkroví se světlou výškou 2,11 až 3,22&nbsp;m</li>
+        <li><b>3</b> Stropní panely Spirol 200&nbsp;mm, kročejová izolace Rockwool</li>
+        <li><b>4</b> Přízemí se světlou výškou 2,50&nbsp;m</li>
+        <li><b>5</b> Nosné zdivo Porotherm 30, zateplení čedičovou vlnou 240&nbsp;mm</li>
+        <li><b>6</b> Podlaha na terénu s&nbsp;220&nbsp;mm izolace EPS</li>
+        <li><b>7</b> Plastová okna s&nbsp;trojsklem, Uw&nbsp;0,84&nbsp;W/m²K, rám bílý nebo zlatý dub</li>
+      </ol>
+    </figure>
+  </div>
+</section>
+
+{# ---------- BYT ---------- #}
+<section class="sekce byt" id="byt" aria-labelledby="h-byt">
+  <div class="wrap">
+    <div class="kapitola kapitola--dve">
+      <div>
+        <p class="nadpisek">Byt 2+kk</p>
+        <h2 id="h-byt">47,21&nbsp;m², ve kterých nic nepřebývá</h2>
+      </div>
+      <p class="vetsi">Všechny byty mají stejnou, promyšlenou dispozici: obytná kuchyň s&nbsp;obývacím pokojem, samostatná ložnice, koupelna s&nbsp;WC a&nbsp;chodba se skříněmi. Klepněte na místnost v&nbsp;půdorysu.</p>
+    </div>
+    <div class="pudorys" data-pudorys>
+      <div class="pudorys__plan">
+        <div class="pudorys__obraz">
+        {{ img('pudorys-vzorovy-byt.jpg', 'Zařízený půdorys bytu 2+kk: vlevo ložnice, uprostřed koupelna, vpravo kuchyň s obývacím pokojem, dole chodba', sizes='(min-width: 64rem) 62vw, 100vw', cls='pudorys__img') }}
+        <svg class="pudorys__mapa" viewBox="0 0 1190 655" preserveAspectRatio="none" aria-hidden="true">
+          {% for m in data.mistnosti %}<polygon points="{% for b in m.body %}{{ b[0] }},{{ b[1] }} {% endfor %}" data-mistnost="{{ m.id }}"/>{% endfor %}
+        </svg>
+        </div>
+        <p class="pudorys__zdroj">Půdorys vzorového bytu · návrh VDEKOR Interiors</p>
+      </div>
+      <div class="pudorys__panel">
+        <div class="pudorys__tlacitka" role="tablist" aria-label="Místnosti bytu">
+          {% for m in data.mistnosti %}<button type="button" role="tab" id="tab-{{ m.id }}" aria-controls="m-{{ m.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" data-mistnost="{{ m.id }}"><span>{{ m.nazev }}</span><span class="pudorys__m2">{{ m.plocha }}&nbsp;m²</span></button>{% endfor %}
+        </div>
+        {% for m in data.mistnosti %}
+        <div class="pudorys__detail" id="m-{{ m.id }}" role="tabpanel" aria-labelledby="tab-{{ m.id }}" {% if not loop.first %}hidden{% endif %}>
+          <p class="pudorys__velke"><span>{{ m.plocha }}</span>&nbsp;m²</p>
+          <h3>{{ m.nazev }}</h3>
+          <p>{{ m.text }}</p>
+          <p class="pudorys__vzor">{{ m.vzor }}</p>
+        </div>
+        {% endfor %}
+        <p class="pudorys__soucet">Celkem 47,21&nbsp;m² · k&nbsp;tomu sklep 3&nbsp;m², zahrádka nebo balkon a&nbsp;parkovací stání</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ---------- VZOROVÝ BYT ---------- #}
+<section class="sekce vzor" id="vzorovy-byt" aria-labelledby="h-vzor">
+  <div class="wrap">
+    <div class="kapitola kapitola--dve">
+      <div>
+        <p class="nadpisek">Vzorový byt</p>
+        <h2 id="h-vzor">Teplé dřevo, kašmír a&nbsp;matná černá</h2>
+      </div>
+      <p class="vetsi">Interiér vzorového bytu navrhlo studio VDEKOR Interiors. Klidná paleta, ve které vynikne nábytek i&nbsp;umění, a&nbsp;materiály, které vydrží.</p>
+    </div>
+    <ul class="materialy" role="list">
+      {% for m in data.materialy %}
+      <li class="material" data-reveal data-reveal-delay="{{ loop.index0 % 3 }}">
+        <span class="material__vzorek{% if m.get("vzor") %} material__vzorek--{{ m.vzor }}{% endif %}" style="--barva: {{ m.barva }}" aria-hidden="true"></span>
+        <h3>{{ m.nazev }}</h3>
+        <p>{{ m.popis }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="galerie">
+      {% for g in data.galerie %}
+      <figure class="galerie__{{ g.tvar }}" data-reveal data-reveal-delay="{{ loop.index0 % 2 }}">
+        <div class="deska">{{ img(g.soubor, g.alt, sizes=g.sizes, cls='foto') }}</div>
+        <figcaption>{{ g.popisek }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+    <p class="vzor__pozn">Vizualizace jsou ilustrační a&nbsp;vycházejí z&nbsp;výběru materiálů a&nbsp;nábytku pro vzorový byt. Co přesně je součástí standardu bytu, vám rádi upřesníme.</p>
+  </div>
+</section>
+
+{# ---------- CENÍK ---------- #}
+<section class="sekce cenik" id="cenik" aria-labelledby="h-cenik">
+  <div class="wrap">
+    <div class="kapitola kapitola--dve">
+      <div>
+        <p class="nadpisek">Ceník</p>
+        <h2 id="h-cenik">Všech 32 bytů na jednom místě</h2>
+      </div>
+      <p class="vetsi">Cena zahrnuje sklepní kóji a&nbsp;zahrádku nebo balkon. Ke každému bytu patří parkovací stání. Ceník platí od 16.&nbsp;9.&nbsp;2026.</p>
+    </div>
+    <div class="filtr" data-filtr>
+      <div class="filtr__skupina" role="group" aria-label="Dům">
+        <button type="button" aria-pressed="true" data-f="dum" data-v="">Oba domy</button>
+        <button type="button" aria-pressed="false" data-f="dum" data-v="I">K&nbsp;Metelce I</button>
+        <button type="button" aria-pressed="false" data-f="dum" data-v="II">K&nbsp;Metelce II</button>
+      </div>
+      <div class="filtr__skupina" role="group" aria-label="Podlaží">
+        <button type="button" aria-pressed="true" data-f="podlazi" data-v="">Všechna podlaží</button>
+        <button type="button" aria-pressed="false" data-f="podlazi" data-v="přízemí">Přízemí se zahrádkou</button>
+        <button type="button" aria-pressed="false" data-f="podlazi" data-v="patro">Podkroví s balkonem</button>
+      </div>
+      <p class="filtr__pocet" aria-live="polite"><span data-pocet>32</span> bytů</p>
+    </div>
+    <p class="cenik__spolecne">Všechny byty: dispozice 2+kk, 47,21&nbsp;m², sklepní kóje 3&nbsp;m² a&nbsp;parkovací stání.</p>
+    <div class="tabulka-obal">
+      <table class="tabulka">
+        <thead>
+          <tr><th scope="col">Byt</th><th scope="col">Podlaží</th><th scope="col">Dispozice</th><th scope="col" class="c">Plocha bytu</th><th scope="col" class="c">Zahrádka / balkon</th><th scope="col" class="c">Sklep</th><th scope="col" class="c">Celkem</th><th scope="col" class="c">Cena</th><th scope="col"><span class="vh">Zájem</span></th></tr>
+        </thead>
+        <tbody>
+          {% for b in byty %}
+          {% set oznaceni = b.dum ~ '/' ~ b.cislo %}
+          <tr data-dum="{{ b.dum }}" data-podlazi="{{ b.podlazi }}">
+            <th scope="row"><span class="tabulka__dum">K Metelce {{ b.dum }}</span> byt {{ b.cislo }}</th>
+            <td data-l="Podlaží">{{ 'přízemí' if b.podlazi == 'přízemí' else 'podkroví' }}</td>
+            <td data-l="Dispozice">{{ b.dispozice }}</td>
+            <td data-l="Byt" class="c">{{ '%.2f'|format(b.byt)|replace('.', ',') }}&nbsp;m²</td>
+            <td data-l="{{ 'Zahrádka' if b.venku_typ == 'zahrádka' else 'Balkon' }}" class="c">{{ ('%.2f'|format(b.venku)|replace('.', ',')).replace(',00', '') }}&nbsp;m²</td>
+            <td data-l="Sklep" class="c">{{ b.sklep }}&nbsp;m²</td>
+            <td data-l="Celkem" class="c">{{ '%.2f'|format(b.celkem)|replace('.', ',') }}&nbsp;m²</td>
+            <td data-l="Cena" class="c tabulka__cena">{{ '{:,}'.format(b.cena)|replace(',', '&nbsp;')|safe }}&nbsp;Kč</td>
+            <td class="tabulka__akce"><a href="#kontakt" data-zajem="K Metelce {{ b.dum }}, byt {{ b.cislo }} ({{ 'přízemí se zahrádkou' if b.podlazi == 'přízemí' else 'podkroví s balkonem' }})">Mám zájem</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+{# ---------- KONTAKT ---------- #}
+<section class="sekce kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap kontakt__in">
+    <div class="kontakt__text">
+      <p class="nadpisek">Kontakt</p>
+      <h2 id="h-kontakt">Domluvte si prohlídku vzorového bytu</h2>
+      <p class="vetsi">Napište, který byt vás zajímá. Ozveme se, pošleme podrobné podklady a&nbsp;domluvíme prohlídku.</p>
+      <div class="vizitka">
+        <p class="vizitka__jmeno">{{ site.kontakt.jmeno }}</p>
+        <p class="vizitka__role">prodej bytů</p>
+        <p>{% if site.kontakt.telefon %}<a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a>{% else %}<span class="doplnime">telefon doplníme</span>{% endif %}</p>
+        <p>{% if site.kontakt.email %}<a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a>{% else %}<span class="doplnime">e-mail doplníme</span>{% endif %}</p>
+        <p class="vizitka__adresa">K&nbsp;Metelce, 503&nbsp;11 Hradec Králové<br><a href="https://mapy.com/?q=K%20Metelce%2C%20Hradec%20Kr%C3%A1lov%C3%A9" rel="noopener" target="_blank">Ukázat na mapě</a></p>
+      </div>
+    </div>
+    <div class="kontakt__form">
+      {% include "_formular.html" %}
+    </div>
+  </div>
+</section>
+{% endblock %}

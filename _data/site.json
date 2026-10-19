@@ -1,0 +1,33 @@
+{
+  "slug": "rezidencemetelka",
+  "nazev": "Rezidence Metelka",
+  "url": "https://webhunter-navrhy.github.io/rezidencemetelka/",
+  "base": "/rezidencemetelka/",
+  "lang": "cs",
+  "popis": "Rezidence Metelka: 32 bytů 2+kk o 47 m² se zahrádkou nebo balkonem, sklepem a parkovacím stáním. Hradec Králové, ulice K Metelce, pár minut od centra a D11.",
+  "navrh": true,
+  "domena": "rezidencemetelka.cz",
+  "og_image": "pudorys-vzorovy-byt.jpg",
+  "logo": "",
+  "theme_color": "#F5F0E8",
+  "typ": "ApartmentComplex",
+  "ico": "",
+  "kontakt": {
+    "jmeno": "Mgr. Anna Krčmová",
+    "email": "",
+    "telefon": "",
+    "adresa": {"ulice": "K Metelce", "psc": "503 11", "mesto": "Hradec Králové", "zeme": "CZ"}
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "4 990 000 – 5 490 000 Kč",
+  "formular": {"endpoint": "", "demo": true, "predmet": "Zájem o byt – Rezidence Metelka"},
+  "nav": [
+    {"text": "Lokalita", "href": "#hradec"},
+    {"text": "Dům", "href": "#dum"},
+    {"text": "Byt", "href": "#byt"},
+    {"text": "Vzorový byt", "href": "#vzorovy-byt"},
+    {"text": "Ceník", "href": "#cenik"},
+    {"text": "Kontakt", "href": "#kontakt"}
+  ]
+}
