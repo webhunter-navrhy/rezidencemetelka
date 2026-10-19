@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rezidence Metelka – varianta B</title>
+<meta name="description" content="Varianta úvodu webu Rezidence Metelka k výběru.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="stylesheet" href="/rezidencemetelka/css/koncepty.css?v=ba91409077">
+<link rel="icon" href="/rezidencemetelka/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="kb">
+
+
+<section class="kb-hero">
+  <div class="kb-hero__papir">
+    <a class="kb-znacka" href="#">REZIDENCE METELKA</a>
+    <div class="kb-hero__text">
+      <h1>Domov pár minut od&nbsp;centra Hradce.</h1>
+      <p class="kb-perex">Třicet dva bytů 2+kk se zahrádkou nebo balkonem. Klidná ulice K&nbsp;Metelce, rychle u&nbsp;D11.</p>
+      <a class="kb-odkaz" href="#">Zobrazit ceník <i></i></a>
+    </div>
+    <p class="kb-svisle">K&nbsp;Metelce I<br>K&nbsp;Metelce II<br>Hradec Králové</p>
+  </div>
+  <div class="kb-hero__foto">
+    <nav class="kb-menu"><a href="#">Lokalita</a><a href="#">Byty</a><a href="#">Ceník</a><a href="#">Kontakt</a><i></i></nav>
+    <img src="/rezidencemetelka/img/viz-loznice-okno-1280.webp" srcset="/rezidencemetelka/img/viz-loznice-okno-640.webp 640w, /rezidencemetelka/img/viz-loznice-okno-1280.webp 1280w" sizes="(min-width: 60rem) 64vw, 100vw" width="1280" height="1536" alt="Vizualizace ložnice u okna s rámem ve zlatém dubu a lněným závěsem" loading="eager" fetchpriority="high" decoding="async">
+    <p class="kb-foto-popis">Okna s&nbsp;trojsklem<br>rám zlatý dub</p>
+  </div>
+</section>
+<section class="kb-lokalita">
+  <div class="kb-lokalita__hlava">
+    <h2>Všude blízko</h2>
+    <p>Orientační časy autem z&nbsp;ulice K&nbsp;Metelce.</p>
+  </div>
+  <div class="kb-lokalita__mrizka">
+    <figure data-reveal>
+      <img src="/rezidencemetelka/img/hk-prazsky-most-1920.webp" srcset="/rezidencemetelka/img/hk-prazsky-most-640.webp 640w, /rezidencemetelka/img/hk-prazsky-most-1280.webp 1280w, /rezidencemetelka/img/hk-prazsky-most-1920.webp 1920w" sizes="(min-width: 60rem) 44vw, 100vw" width="1920" height="1130" alt="Pražský most přes Labe s Bílou věží" loading="lazy" decoding="async">
+      <figcaption>Pražský most a&nbsp;Bílá věž · foto Michielverbeek, CC BY-SA</figcaption>
+    </figure>
+    <ul class="kb-casy" role="list" data-reveal>
+      <li><b>5 min</b><span>Hlavní nádraží</span></li>
+      <li><b>8 min</b><span>Zimní stadion a&nbsp;tenis centrum</span></li>
+      <li><b>9 min</b><span>Velké náměstí</span></li>
+      <li><b>13 min</b><span>Golf v&nbsp;Roudničce</span></li>
+      <li><b>4 km</b><span>Nájezd na dálnici D11</span></li>
+      <li><b>80 min</b><span>Praha</span></li>
+    </ul>
+  </div>
+</section>
+
+<nav class="prepinac" aria-label="Varianty úvodu">
+  <span>Varianta</span>
+  <a href="/rezidencemetelka/koncept-a/">A</a>
+  <a href="/rezidencemetelka/koncept-b/" aria-current="page">B</a>
+  <a href="/rezidencemetelka/koncept-c/">C</a>
+</nav>
+<script>
+  (function () {
+    var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (z) { z.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' }) : null;
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { io ? io.observe(el) : el.classList.add('is-in'); });
+  })();
+</script>
+</body>
+</html>

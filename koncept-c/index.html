@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rezidence Metelka – varianta C</title>
+<meta name="description" content="Varianta úvodu webu Rezidence Metelka k výběru.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="stylesheet" href="/rezidencemetelka/css/koncepty.css?v=ba91409077">
+<link rel="icon" href="/rezidencemetelka/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="kc">
+
+
+<section class="kc-hero">
+  <p class="kc-nad">Byty 2+kk&ensp;/&ensp;Hradec Králové</p>
+  <p class="kc-titul" aria-hidden="true">Rezidence Metelka</p>
+  <div class="kc-ram">
+    <img src="/rezidencemetelka/img/viz-obyvak-1344.webp" srcset="/rezidencemetelka/img/viz-obyvak-640.webp 640w, /rezidencemetelka/img/viz-obyvak-1280.webp 1280w, /rezidencemetelka/img/viz-obyvak-1344.webp 1344w" sizes="100vw" width="1344" height="864" alt="Vizualizace obývacího pokoje s kuchyní, dub v rybí kosti a skříně v odstínu kašmír" class="kc-ram__foto" loading="eager" fetchpriority="high" decoding="async">
+    <header class="kc-menu"><span>Rezidence Metelka</span><nav><a href="#">Lokalita</a><a href="#">Byty</a><a href="#">Ceník</a><a href="#">Kontakt</a></nav></header>
+    <div class="kc-ram__text">
+      <h1>Město začíná<br>za vašimi dveřmi</h1>
+      <p>32 bytů 2+kk ve dvou nových domech, 9&nbsp;minut od Velkého náměstí.</p>
+      <a href="#" class="kc-kulate" aria-label="Pokračovat dolů">↓</a>
+    </div>
+  </div>
+</section>
+<section class="kc-vyhody">
+  <div class="kc-vyhody__hlava">
+    <h2>Proč K&nbsp;Metelce</h2>
+    <p>Klid rezidenční čtvrti<br>a&nbsp;krajské město po ruce.</p>
+  </div>
+  <ul class="kc-vyhody__rada" role="list">
+    <li data-reveal><b>9 min</b><h3>do centra</h3><p>Velké náměstí, divadlo, univerzita i&nbsp;fakultní nemocnice do deseti minut autem.</p></li>
+    <li data-reveal><b>8 min</b><h3>na sport</h3><p>Zimní stadion, tenis centrum, Malšovická aréna a&nbsp;golf v&nbsp;Roudničce.</p></li>
+    <li data-reveal><b>4 km</b><h3>k&nbsp;dálnici D11</h3><p>Pardubice za půl hodiny, Praha zhruba za osmdesát minut.</p></li>
+    <li data-reveal><b>47 m²</b><h3>a&nbsp;něco navíc</h3><p>Zahrádka až 55&nbsp;m² nebo balkon, sklep a&nbsp;vlastní parkovací stání.</p></li>
+  </ul>
+  <div class="kc-byt" data-reveal>
+    <div class="kc-byt__text">
+      <h2>Byt 2+kk</h2>
+      <p>Obytná kuchyň 24,05&nbsp;m², ložnice 10,40&nbsp;m², koupelna s&nbsp;WC 6,99&nbsp;m² a&nbsp;chodba se skříněmi.</p>
+      <a href="#" class="kc-odkaz">Projít půdorys</a>
+    </div>
+    <img src="/rezidencemetelka/img/pudorys-vzorovy-byt-1920.webp" srcset="/rezidencemetelka/img/pudorys-vzorovy-byt-640.webp 640w, /rezidencemetelka/img/pudorys-vzorovy-byt-1280.webp 1280w, /rezidencemetelka/img/pudorys-vzorovy-byt-1920.webp 1920w" sizes="(min-width: 60rem) 50vw, 100vw" width="1920" height="1057" alt="Zařízený půdorys bytu 2+kk od studia VDEKOR Interiors" class="kc-byt__plan" loading="lazy" decoding="async">
+    <img src="/rezidencemetelka/img/viz-kuchyne-1536.webp" srcset="/rezidencemetelka/img/viz-kuchyne-640.webp 640w, /rezidencemetelka/img/viz-kuchyne-1280.webp 1280w, /rezidencemetelka/img/viz-kuchyne-1536.webp 1536w" sizes="(min-width: 60rem) 22vw, 100vw" width="1536" height="1024" alt="Vizualizace kuchyně v odstínu kašmír s černou baterií" class="kc-byt__foto" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<nav class="prepinac" aria-label="Varianty úvodu">
+  <span>Varianta</span>
+  <a href="/rezidencemetelka/koncept-a/">A</a>
+  <a href="/rezidencemetelka/koncept-b/">B</a>
+  <a href="/rezidencemetelka/koncept-c/" aria-current="page">C</a>
+</nav>
+<script>
+  (function () {
+    var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (z) { z.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' }) : null;
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { io ? io.observe(el) : el.classList.add('is-in'); });
+  })();
+</script>
+</body>
+</html>
